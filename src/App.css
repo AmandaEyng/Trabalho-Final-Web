@@ -1,0 +1,485 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #eee;
+    line-height: 1.6;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #16213e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .logo h1 {
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #e94560;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .nav button {
+    background: #0f3460;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .nav button:hover {
+    background: #e94560;
+  }
+  
+  .logout-btn {
+    background: #53354a;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #16213e;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Product Card */
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .product-card {
+    background: #0f3460;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .product-info {
+    padding: 10px;
+  }
+  
+  .product-info h3 {
+    color: #e94560;
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .actions button {
+    background: #e94560;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .actions button.fav-active {
+    background: #53354a;
+  }
+  
+  /* Home */
+  .home section {
+    margin-bottom: 30px;
+  }
+  
+  .home h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e94560;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  .categories-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .category-badge {
+    background: #e94560;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  /* Catálogo */
+  .catalogo h2 {
+    margin-bottom: 15px;
+  }
+  
+  .filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: #16213e;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .search-input, .filters-bar select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #0f3460;
+    background: #0f3460;
+    color: white;
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  /* Produto Detail */
+  .produto-detail {
+    background: #16213e;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .back-btn {
+    background: none;
+    border: none;
+    color: #e94560;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  
+  .produto-content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .produto-content img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .produto-info {
+    flex: 1;
+  }
+  
+  .produto-info .price {
+    font-size: 1.8rem;
+    margin: 15px 0;
+  }
+  
+  .produto-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .btn-add-cart, .btn-fav {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn-add-cart {
+    background: #e94560;
+    color: white;
+  }
+  
+  .btn-fav {
+    background: #0f3460;
+    color: white;
+  }
+  
+  .btn-fav.fav-active {
+    background: #53354a;
+  }
+  
+  /* Carrinho */
+  .cart, .favorites {
+    background: #16213e;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .cart-items {
+    list-style: none;
+    margin: 20px 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #0f3460;
+    flex-wrap: wrap;
+  }
+  
+  .cart-item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .cart-item-info {
+    flex: 2;
+  }
+  
+  .qty-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .qty-control button {
+    background: #e94560;
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .remove-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .cart-total {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .checkout-btn, .btn-finalizar {
+    background: #e94560;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Favoritos */
+  .favorites p {
+    margin-top: 20px;
+  }
+  
+  /* Checkout */
+  .checkout, .checkout-success {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #16213e;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .checkout form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #0f3460;
+    background: #0f3460;
+    color: white;
+  }
+  
+  .checkout-summary {
+    background: #0f3460;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+  }
+  
+  .error-msg {
+    color: #e94560;
+    margin-bottom: 10px;
+  }
+  
+  /* Login */
+  .login {
+    max-width: 400px;
+    margin: 50px auto;
+    background: #16213e;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .login form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #0f3460;
+    background: #0f3460;
+    color: white;
+  }
+  
+  .login-hint {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #999;
+  }
+  
+  /* Adicionar Jogo */
+  .add-game {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #16213e;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .add-game form input, .add-game textarea, .add-game select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #0f3460;
+    background: #0f3460;
+    color: white;
+  }
+  
+  .add-game textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .msg {
+    background: #27ae60;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Gerenciar Jogos */
+  .manage-games {
+    background: #16213e;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .games-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .games-table th, .games-table td {
+    padding: 10px;
+    border-bottom: 1px solid #0f3460;
+    text-align: left;
+  }
+  
+  .table-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .action-cell button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background: #e94560;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .delete-btn {
+    background: #c0392b !important;
+  }
+  
+  .edit-modal {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #1a1a2e;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  
+  .edit-modal input, .edit-modal textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #0f3460;
+    background: #0f3460;
+    color: white;
+  }
+  
+  .edit-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
