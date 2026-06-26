@@ -1,0 +1,253 @@
+Quero que você desenvolva um projeto completo de um E-commerce de Jogos utilizando APENAS as seguintes tecnologias:
+
+* React
+* HTML
+* CSS
+* JavaScript
+
+IMPORTANTE:
+
+* NÃO utilizar Vite.
+* NÃO utilizar Next.js.
+* NÃO utilizar Node.js como backend.
+* NÃO utilizar Express.
+* NÃO utilizar Firebase.
+* NÃO utilizar Supabase.
+* NÃO utilizar Bootstrap.
+* NÃO utilizar Tailwind.
+* NÃO utilizar Material UI.
+* NÃO utilizar APIs externas.
+* NÃO utilizar banco de dados.
+* NÃO utilizar qualquer biblioteca adicional além do React.
+* Todo o projeto deve funcionar apenas no navegador.
+* Persistência de dados deve ser feita utilizando LocalStorage.
+* O código deve ser simples, didático e adequado para um trabalho acadêmico de desenvolvimento web.
+
+O tema do projeto é:
+
+# E-commerce de Jogos
+
+O sistema deve possuir as seguintes funcionalidades:
+
+## 1. Home
+
+A página inicial deve conter:
+
+* Logo da loja
+* Menu de navegação
+* Jogos em destaque
+* Jogos em promoção
+* Jogos mais vendidos
+* Categorias
+
+## 2. Catálogo de Jogos
+
+Exibir todos os jogos cadastrados.
+
+Cada jogo deve mostrar:
+
+* Imagem
+* Nome
+* Preço
+
+Filtros:
+
+* Gênero
+* Plataforma
+* Faixa de preço
+
+Ordenação:
+
+* Menor preço
+* Maior preço
+* Ordem alfabética
+
+## 3. Sistema de Busca
+
+Implementar:
+
+* Campo de pesquisa
+* Busca em tempo real conforme o usuário digita
+
+## 4. Página de Produto
+
+Cada produto deve possuir:
+
+* Imagem
+* Nome
+* Descrição
+* Categoria
+* Plataforma
+* Preço
+* Botão "Adicionar ao Carrinho"
+* Botão "Favoritar"
+
+## 5. Favoritos
+
+Permitir:
+
+* Adicionar aos favoritos
+* Remover dos favoritos
+* Visualizar lista de favoritos
+
+Os favoritos devem ser armazenados no LocalStorage.
+
+## 6. Carrinho
+
+Permitir:
+
+* Adicionar produtos
+* Remover produtos
+* Alterar quantidade
+* Calcular subtotal
+* Calcular valor total automaticamente
+
+Os dados do carrinho devem ser armazenados no LocalStorage.
+
+## 7. Checkout Simulado
+
+Criar uma página de checkout contendo:
+
+Campos:
+
+* Nome
+* E-mail
+* Endereço
+
+Resumo do pedido:
+
+* Produtos comprados
+* Quantidade
+* Valor total
+
+Após finalizar:
+
+Exibir mensagem:
+
+"Compra realizada com sucesso!"
+
+## 8. Sistema de Login e Credenciamento
+
+Implementar dois tipos de acesso:
+
+### Cliente
+
+Pode:
+
+* Visualizar produtos
+* Pesquisar produtos
+* Adicionar aos favoritos
+* Adicionar ao carrinho
+* Realizar checkout
+
+Não pode:
+
+* Adicionar jogos
+* Editar jogos
+* Excluir jogos
+
+### Administrador
+
+Pode:
+
+* Adicionar jogos
+* Editar jogos
+* Excluir jogos
+* Gerenciar catálogo
+
+Credenciais fixas:
+
+Usuário: admin
+
+Senha: admin123
+
+Ao realizar login com essas credenciais, o usuário deve receber acesso administrativo.
+
+Utilizar LocalStorage para manter a sessão.
+
+## 9. Cadastro de Jogos (Administrador)
+
+Criar formulário para cadastrar jogos contendo:
+
+* Nome
+* Descrição
+* Preço
+* Categoria
+* Plataforma
+* URL da imagem
+
+Botão:
+
+"Adicionar Jogo"
+
+Os jogos cadastrados devem ser salvos no LocalStorage.
+
+## 10. Gerenciamento de Jogos (Administrador)
+
+Permitir:
+
+* Editar jogos
+* Excluir jogos
+
+Todas as alterações devem refletir imediatamente no catálogo.
+
+## Estrutura do Projeto
+
+Organize o projeto em pastas semelhantes a:
+
+src/
+│
+├── components/
+│   ├── Header
+│   ├── Footer
+│   ├── ProductCard
+│
+├── pages/
+│   ├── Home
+│   ├── Catalogo
+│   ├── Produto
+│   ├── Carrinho
+│   ├── Favoritos
+│   ├── Checkout
+│   ├── Login
+│   ├── AdicionarJogo
+│   └── GerenciarJogos
+│
+├── data/
+│
+├── App.jsx
+├── App.css
+└── index.js
+
+REQUISITOS IMPORTANTES:
+
+1. Gere TODOS os arquivos do projeto.
+2. Mostre o conteúdo completo de cada arquivo.
+3. Explique claramente em qual pasta cada arquivo deve ser criado.
+4. Não omita código.
+5. Não escreva apenas trechos; escreva os arquivos completos.
+6. Gere CSS para todas as páginas.
+7. Gere dados iniciais de exemplo com pelo menos 10 jogos.
+8. O layout deve ser bonito, mas simples.
+9. O código deve ser compatível com React usando apenas JavaScript.
+
+Além disso, depois de gerar todo o código, forneça um guia extremamente detalhado explicando:
+
+* Como criar a estrutura de pastas.
+* Como instalar o React da forma mais básica possível.
+* Como configurar o projeto.
+* Como colar cada arquivo.
+* Como executar o projeto.
+* Como resolver erros comuns.
+* Como testar todas as funcionalidades.
+* Como testar login de administrador.
+* Como testar login de cliente.
+* Como testar favoritos.
+* Como testar carrinho.
+* Como testar checkout.
+* Como testar cadastro de jogos.
+* Como testar edição e exclusão de jogos.
+
+Não pule nenhuma etapa e explique tudo como se estivesse ensinando alguém que nunca criou um projeto React antes.
+
+Por fim, faça uma revisão final verificando se todas as funcionalidades solicitadas foram implementadas.
