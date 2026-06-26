@@ -30,7 +30,7 @@
   .header {
     background-color: #16213e;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 10px 20px;
     flex-wrap: wrap;
@@ -85,15 +85,30 @@
   }
   
   .product-card {
+    position: relative;
     background: #0f3460;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.2s;
     cursor: pointer;
   }
-  
+
   .product-card:hover {
     transform: scale(1.02);
+  }
+
+  .promo-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background: #e94560;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   }
   
   .product-card img {
@@ -116,20 +131,71 @@
     font-size: 1.2rem;
     color: #f5f5f5;
   }
+
+  .price-block {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .original-price {
+    color: #999;
+    text-decoration: line-through;
+  }
+
+  .promo-price {
+    color: #ffcc00;
+    font-weight: bold;
+  }
+
+  .discount-percentage {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #ffcc00;
+    font-weight: bold;
+  }
+
+  .promo-text {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #ffcc00;
+    font-weight: bold;
+  }
   
   .actions {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     margin-top: 10px;
+    flex-wrap: wrap;
   }
   
   .actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     background: #e94560;
     border: none;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10px 18px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    white-space: nowrap;
+  }
+  
+  .actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22);
+    background: #ff5e75;
+  }
+  
+  .actions button:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
   }
   
   .actions button.fav-active {
@@ -156,9 +222,21 @@
   
   .category-badge {
     background: #e94560;
+    color: white;
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  
+  .category-badge:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+  }
+  
+  .category-badge.active {
+    background: #ff5e75;
   }
   
   /* Catálogo */
@@ -225,29 +303,106 @@
   
   .produto-actions {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
   }
   
-  .btn-add-cart, .btn-fav {
+  .btn-add-cart {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     padding: 12px 24px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
-  }
-  
-  .btn-add-cart {
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
     background: #e94560;
     color: white;
   }
   
-  .btn-fav {
-    background: #0f3460;
-    color: white;
+  .btn-add-cart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22);
+    background: #ff5e75;
   }
   
+  .btn-add-cart:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+  }
+
+  .btn-fav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 2px solid #e94560;
+    border-radius: 10px;
+    background: transparent;
+    color: #e94560;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  }
+
+  .btn-fav:hover {
+    transform: translateY(-2px);
+    background: rgba(233, 69, 96, 0.12);
+    color: #ff5e75;
+  }
+
   .btn-fav.fav-active {
+    background: #e94560;
+    color: white;
+    border-color: #e94560;
+  }
+  
+  .fav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #e94560;
+    cursor: pointer;
+    transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+    font-size: 1.1rem;
+    box-shadow: none;
+    padding: 0;
+  }
+
+
+  
+  .fav-icon:hover {
+    transform: translateY(-2px);
+    background: rgba(233, 69, 96, 0.08);
+    border-radius: 8px;
+  }
+  
+  .fav-icon.fav-active {
+    color: #ff5e75;
+    background: rgba(233, 69, 96, 0.12);
+    border-radius: 8px;
+  }
+  
+  .btn-add-cart.added {
+    background: #53354a;
+    cursor: default;
+  }
+  
+  .btn-add-cart.added:hover {
+    transform: none;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
     background: #53354a;
   }
   
@@ -283,20 +438,11 @@
     flex: 2;
   }
   
-  .qty-control {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .qty-control button {
-    background: #e94560;
-    border: none;
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    cursor: pointer;
+  .cart-count {
+    margin-top: 10px;
+    font-weight: normal;
+    color: #f5f5f5;
+    text-align: center;
   }
   
   .remove-btn {
@@ -304,6 +450,10 @@
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
+  }
+  
+  .cart-empty button {
+    margin-top: 10px;
   }
   
   .cart-total {
@@ -377,6 +527,23 @@
     background: #0f3460;
     color: white;
   }
+
+  .login form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background: #e94560;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+  }
+
+  .login form button:hover {
+    background: #ff5e75;
+  }
   
   .login-hint {
     margin-top: 15px;
@@ -406,6 +573,25 @@
   .add-game textarea {
     height: 100px;
     resize: vertical;
+  }
+
+  .add-game form button,
+  .add-game > button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background: #e94560;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+  }
+
+  .add-game form button:hover,
+  .add-game > button:hover {
+    background: #ff5e75;
   }
   
   .msg {
@@ -482,4 +668,23 @@
     display: flex;
     gap: 10px;
     justify-content: flex-end;
+  }
+
+  .edit-buttons button {
+    padding: 10px 16px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: #e94560;
+    color: white;
+  }
+
+  .edit-buttons button:last-child {
+    background: #0f3460;
+    border: 1px solid #0f3460;
+  }
+
+  .edit-buttons button:hover {
+    opacity: 0.9;
   }

@@ -1,11 +1,14 @@
 import React from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigation } from '../contexts/NavigationContext';
+import { useCart } from '../contexts/CartContext';
 import '../App.css';
 
 const Header = () => {
   const { user, logout, isAdmin } = useAuth();
   const { navigateTo } = useNavigation();
+  const { cart } = useCart();
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <header className="header">
@@ -16,7 +19,9 @@ const Header = () => {
         <button onClick={() => navigateTo('home')}>Home</button>
         <button onClick={() => navigateTo('catalog')}>Catálogo</button>
         <button onClick={() => navigateTo('favorites')}>Favoritos</button>
-        <button onClick={() => navigateTo('cart')}>🛒 Carrinho</button>
+        <button onClick={() => navigateTo('cart')}>
+          🛒 Carrinho
+        </button>
         {user ? (
           <>
             {isAdmin && (
