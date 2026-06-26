@@ -1,0 +1,99 @@
+Claro — aqui está um prompt pronto, estruturado na fórmula **FOCO**, para você copiar e usar em outra IA:
+
+---
+
+**PROMPT FOCO**
+
+**F — Função**
+Você é um desenvolvedor front-end sênior especializado em criação de interfaces modernas com **React**, **HTML**, **CSS** e **JavaScript**. Você também atua como arquiteto de interface, garantindo organização de componentes, responsividade, boa usabilidade e código limpo. Você deve pensar como alguém que entrega um projeto completo, funcional e apresentável para avaliação acadêmica.
+
+**O — Objetivo**
+Desenvolver um **projeto completo de site e-commerce de jogos**, com interface visual atrativa, navegação funcional e estrutura pronta para demonstração. O site deve incluir, no mínimo:
+
+* página inicial;
+* vitrine/listagem de jogos;
+* barra de busca;
+* carrinho de compras;
+* simulação de compra/checkout;
+* layout responsivo;
+* uso obrigatório de **React** na construção do projeto.
+
+O resultado deve ser um projeto pronto, organizado e utilizável como entrega final, com componentes bem divididos e funcionamento coerente.
+
+**C — Contexto**
+Este é um **projeto acadêmico/demonstrativo**, então a funcionalidade de compra **não precisa processar pagamento real**. A etapa de compra deve apenas simular a ação, por exemplo com confirmação visual, mensagem de sucesso ou resumo do pedido.
+
+Regras e limitações do projeto:
+
+* só podem ser usados **HTML, CSS, JavaScript e React**;
+* não usar bibliotecas externas, frameworks adicionais, backend, banco de dados ou APIs;
+* toda a lógica deve funcionar no front-end;
+* o site deve ser sobre **venda de jogos**;
+* deve haver produtos fictícios, com imagens ilustrativas ou placeholders;
+* a busca deve filtrar jogos pelo nome ou categoria;
+* o carrinho deve permitir adicionar, remover e alterar quantidade de itens;
+* a compra deve ser apenas uma simulação, sem integração real de pagamento.
+
+**O — Orientação**
+Entregue o projeto com a seguinte organização:
+
+1. **Estrutura do projeto**
+
+   * explique a estrutura de pastas e arquivos;
+   * organize o projeto em componentes React reutilizáveis.
+
+2. **Código completo**
+
+   * forneça todos os arquivos necessários;
+   * inclua o código de forma pronta para copiar e executar;
+   * use nomes claros para componentes, funções e variáveis.
+
+3. **Interface e experiência do usuário**
+
+   * o site deve ter aparência moderna, com tema voltado para games;
+   * usar cores coerentes com o tema gamer;
+   * garantir responsividade para desktop e mobile;
+   * incluir cards de produtos com imagem, nome, preço e botão de adicionar ao carrinho.
+
+4. **Funcionalidades mínimas obrigatórias**
+
+   * busca de jogos;
+   * listagem de produtos;
+   * carrinho com soma de valores;
+   * controle de quantidade;
+   * botão de finalizar compra com simulação visual;
+   * mensagem de confirmação após a compra simulada.
+
+5. **Critérios de aceite**
+   O projeto só será considerado correto se:
+
+   * for feito em React;
+   * usar apenas HTML, CSS e JavaScript além do React;
+   * tiver busca funcional;
+   * tiver carrinho funcional;
+   * tiver compra simulada;
+   * estiver bem organizado e visualmente agradável;
+   * puder ser apresentado como projeto completo.
+
+6. **Como validar**
+   Verifique se:
+
+   * a busca realmente filtra os jogos;
+   * os itens adicionados aparecem no carrinho;
+   * o total é atualizado corretamente;
+   * a simulação de compra mostra confirmação;
+   * o layout continua bom em telas menores;
+   * os componentes estão separados de forma lógica.
+
+7. **O que não incluir**
+
+   * backend;
+   * banco de dados;
+   * autenticação real;
+   * pagamento real;
+   * bibliotecas extras fora de React;
+   * código incompleto ou apenas explicações sem entrega prática.
+
+**Entrega esperada:**
+Retorne o projeto completo, com explicação objetiva da estrutura e com todos os arquivos de código necessários para implementação.
+
